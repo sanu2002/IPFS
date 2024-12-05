@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+
+      #get {
+        margin-top: 20px;
+        background-color: #2196F3;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      #result.green {
+        color: green;
+      }
+
+      #result.red {
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Here we will upload data into IPFS</h1>
+    <form id="submit">
+      <label for="in">Enter text to store:</label>
+      <input id="in1" name="in" type="text" required /><br>
+      <button id="btn" type="submit">Upload</button>
+    </form>
+
+    <button id="get" type="button">Get</button>
+    <h1>Here is your uploaded data: <span id="result"></span></h1>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
